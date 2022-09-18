@@ -11,6 +11,6 @@
     <title>Final</title>
 </head>
 <body>
-    <p>Welcome to Spring MVC tutorials</p>
+    <p>Welcome User</p>
 </body>
 </html>

@@ -4,15 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class MyController {
+public class CompanyController {
 
-    @RequestMapping("/hello")
-    public String redirect(){
-        return "viewpage";
-    }
-    @RequestMapping("/helloagain")
+    @RequestMapping("/hellocompany")
     public String display(){
-        return "final";
+        return "companypage";
     }
 
 }

@@ -1,6 +1,7 @@
 <html>
 <body>
 <p>Welcome</p>
-<a href="hello">click here</a>
+<a href="hellouser">click user</a><br>
+<a href="hellocompany">click company</a>
 </body>
 </html>
