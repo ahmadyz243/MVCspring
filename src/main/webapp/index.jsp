@@ -1,7 +1,10 @@
 <html>
 <body>
 <p>Welcome</p>
-<a href="hellouser">click user</a><br>
-<a href="hellocompany">click company</a>
+<form action="user">
+    username: <input type="text" name="name"><br>
+    password: <input type="password" name="password"><br>
+    <input type="submit">
+</form>
 </body>
 </html>
