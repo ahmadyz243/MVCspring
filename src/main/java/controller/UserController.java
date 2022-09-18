@@ -3,6 +3,7 @@ package controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,8 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 public class UserController {
 
     @RequestMapping("/user")
-    public String display(HttpServletRequest req, Model model){
-        String name = req.getParameter("name"), password = req.getParameter("password");
+    public String display(@RequestParam("name") String name, @RequestParam("password") String password, Model model){
         if (password.equals("admin")){
             String msg = "hello " + name;
             model.addAttribute("message", msg);
