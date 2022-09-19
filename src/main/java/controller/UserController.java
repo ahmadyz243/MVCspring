@@ -1,12 +1,14 @@
 package controller;
 
+import domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
-
+//@RequestMapping("/loginForm")
 @Controller
 public class UserController {
 
@@ -21,6 +23,20 @@ public class UserController {
             model.addAttribute("message", msg);
             return "errorpage";
         }
+    }
+
+    @RequestMapping("/signup")
+    public String signup(Model model){
+
+        User user = new User();
+        model.addAttribute("user", user);
+
+        return "signuppage";
+    }
+
+    @RequestMapping("/submitForm")
+    public String submitForm(@ModelAttribute("user") User user){
+        return "viewpage";
     }
 
 }
